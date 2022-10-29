@@ -1,0 +1,47 @@
+.app {
+  background: #f1f1f1;
+  display: grid;
+  /* definir las templates areas */
+  grid-template-areas:
+    "encabezado"
+    "contenido"
+    "rodapie";
+
+  grid-template-columns: auto; /* tamaño total de la  pantalla del navegador */
+  grid-template-rows: 50px auto auto; /*  encabezado - contenido - rodapie*/
+}
+
+.encabezado {
+  /* background: #00cc99; */
+  /* definir las areas que estan en cada una */
+  display: flex;
+  align-items: center;
+  grid-area: encabezado;
+  padding: 0 2rem;
+}
+/* estilos del menu */
+.menu__link {
+  color: #333333;
+  padding: 0.5rem 1rem;
+}
+.menu__link:hover,
+.menu__link:active {
+  /* Activa el elemento al hacer clic por el usuario (Enlaces activos) */
+  border-bottom: 2px solid #0073e6;
+}
+
+.contenido {
+  /* background: #ff8080; */
+  /* definir las areas que estan en cada una */
+  padding: 0 2rem;
+  grid-area: contenido;
+}
+
+.footer {
+  background: #fdfdfd;
+  color: #333333;
+  padding: 1rem;
+  text-align: center;
+  /* definir las areas que estan en cada una */
+  grid-area: rodapie;
+}

@@ -1,0 +1,99 @@
+.populares {
+  padding: 3rem 2rem;
+}
+
+/* -----------------------------La que esta por fuera (Cajas de las cards)------------------- */
+.populares__card {
+  background: #fdfdfd;
+  /* ---Definiendo nuestra grid--- */
+  display: grid;
+  grid-template-areas:
+    "card-imagen"
+    "card-base";
+  grid-template-columns: 100%;
+  grid-template-rows: 175px;
+  margin-right: 1rem;
+  width: calc(
+    20% - 1rem
+  ); /* 100% /5 columnas que habran, seria 20%  // 1rem es para un espacio en cada fila*/
+}
+
+/* para dar un espaciado a la ultimoa columna (derecha) */
+.populares__card:last-child {
+  margin-right: 0;
+}
+
+/* --imagen de cada una-- */
+.populares__card___imagen {
+  grid-area: card-imagen; /* --Ubicandola en la grid-- */
+  height: 100%;
+  width: 100%;
+}
+/* ahora la base de cada una */
+.populares__card___base {
+  display: grid; /* se comportara como grid */
+  grid-area: card-base; /* se le ubicara tambien */
+  grid-row-gap: 0.5rem; /* espaciamiento */
+  /* definir tempates dentro de ella */
+  grid-template-areas:
+    "card-header"
+    "card-descripcion";
+  grid-template-rows: 50px auto; /* lineas tengan un espaciamiento */
+  padding: 0.75rem;
+}
+/* ahora la descripcion de cada una */
+.populares__card___descripcion {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: card-descripcion;
+  padding: 1rem 0rem;
+}
+/* ----------------------------------------------------------------------------------- */
+
+/* organizamos todas nuestras tarjetas */
+.populares__contenido {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: contenido; /* Esta en la parte de  style */
+  padding: 1rem 0rem;
+}
+/* ----------------------------------------------------------------------------------- */
+
+/* ---ahora los titulos--- */
+.populares__card___titulo {
+  color: #333333;
+  font-size: 1.5rem;
+}
+/* ----Fecha / data ---- */
+.populares__card___data {
+  color: #808080;
+  font-size: 0.9rem;
+}
+/* parte de le descripcion */
+.populares__card___descripcion {
+  color: #333333;
+  line-height: 1.5; /* Aumentar el interlineado */
+  margin: 1rem 0;
+  text-align: justify;
+}
+/* Titulares de la informacion */
+.populares__titulo {
+  font-weight: 500; /* un poco menos negrita */
+}
+
+/* configurar los iconos de cada uno */
+.populares__icon {
+  margin-right: 0.25rem;
+}
+/* estilos para el header */
+.populares__header {
+  border-bottom: 1px solid #dcdcdc; /* Linea de separacion entre el header y contenido de la tarjeta*/
+  display: flex;
+  justify-content: space-between;
+}
+/* estilo a los botones */
+.populares__boton {
+  background: transparent;
+  border: none;
+  color: #333333;
+}
